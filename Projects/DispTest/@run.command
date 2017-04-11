@@ -1,3 +1,5 @@
+#!/bin/bash
+
 rundir=`dirname $0`
 cd $rundir
 until [ -e @root ]
@@ -7,4 +9,4 @@ do
 done
 echo \*\*\*\*\* DosPath: $s \*\*\*\*\*
 
-/Applications/DOSBox.app/Contents/MacOS/DOSBox -c "c:" -c "cd $s" -c "run.bat" -exit; exit;
+DOSBox.app/Contents/MacOS/DOSBox -conf "DOSBox Preferences" -c "c:" -c "cd $s" -c "run.bat" -exit; exit;
